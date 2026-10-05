@@ -9,10 +9,10 @@
 
 | Progress | Status | Current Milestone |
 | :---: | :---: | :--- |
-| **20%** | 🟡 In Progress | **Milestone 2: Dependencies & Environment Setup** |
+| **40%** | 🟡 In Progress | **Milestone 3: Open Data Pipeline & Schema Harmonization** |
 
 ```
-[████░░░░░░░░░░░░░░░░] 20% Completed
+[████████░░░░░░░░░░░░] 40% Completed
 ```
 
 ---
@@ -22,9 +22,9 @@
 | Milestone | Task Description | Status | Target Deliverables |
 | :--- | :--- | :---: | :--- |
 | **Milestone 1** | Project Initialization & Specs Harmonization | ✅ Completed | `README.md`, `.gitignore`, Specs ingestion, Initial Git Commit |
-| **Milestone 2** | Dependencies & Environment Configuration | 🔄 In Progress | `requirements.txt`, Python packages (`dash`, `plotly`, `pandas`, `requests`, `dash-bootstrap-components`) |
-| **Milestone 3** | Open Data Pipeline & Schema Harmonization | ⏳ Pending | `data_pipeline.py`, Ingestion scripts for `ds_salaries.csv`, `AI_posting.csv`, `raw_skills.csv`, Supply benchmark datasets |
-| **Milestone 4** | Dashboard Layout & Dark Mode Design System | ⏳ Pending | `app.py`, `assets/style.css`, KPI Summary Cards, Global Filters Header, 3-Tab Skeleton |
+| **Milestone 2** | Dependencies & Environment Configuration | ✅ Completed | `requirements.txt`, Python packages (`dash`, `plotly`, `pandas`, `requests`, `dash-bootstrap-components`) |
+| **Milestone 3** | Open Data Pipeline & Schema Harmonization | 🔄 In Progress | `data_pipeline.py`, Ingestion scripts for `ds_salaries.csv`, `AI_posting.csv`, `raw_skills.csv`, Supply benchmark datasets |
+| **Milestone 4** | Dashboard Layout & Dark Mode Design System | ⏳ Pending | `app.py`, `assets/custom.css`, KPI Summary Cards, Global Filters Header, 3-Tab Skeleton |
 | **Milestone 5** | Visual Components & Interactive Callbacks | ⏳ Pending | Tab 1 (Supply), Tab 2 (Demand), Tab 3 (Gap Analysis), Cross-Filtering & Linked State |
 | **Milestone 6** | Testing, Verification & Export Facilities | ⏳ Pending | CSV export, PNG chart export, end-to-end user interaction validation |
 
@@ -40,6 +40,14 @@
   - Created `.gitignore` for Python environments and temporary files.
   - Performed initial commit: `feat: initialize repository with specs, comprehensive README, and gitignore` (`f30f4ac`).
 - **Outcome**: Clean repository root with documented specifications.
+
+### Step 2: Dependency Specification & Environment Verification
+- **Timestamp**: 2026-10-05 17:46
+- **Action**:
+  - Authored `requirements.txt` with required libraries (`dash`, `dash-bootstrap-components`, `plotly`, `pandas`, `numpy`, `requests`).
+  - Successfully installed packages into Python 3.12 environment.
+  - Verified import integrity via smoke test script.
+- **Outcome**: Runtime environment ready for data processing and Dash application execution.
 
 ---
 
