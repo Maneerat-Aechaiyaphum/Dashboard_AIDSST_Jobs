@@ -1,0 +1,214 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #24344d;
+  --border-color: #334155;
+  --border-accent: #0ea5e9;
+  --cyan-primary: #06b6d4;
+  --teal-primary: #14b8a6;
+  --accent-shortage: #f59e0b;
+  --accent-excess: #10b981;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main) !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Card Styling */
+.dash-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease-in-out;
+}
+.dash-card:hover {
+  border-color: #475569;
+  box-shadow: 0 8px 30px -4px rgba(6, 182, 212, 0.12);
+}
+
+/* KPI Card */
+.kpi-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan-primary);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--cyan-primary), var(--teal-primary));
+}
+.kpi-title {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.kpi-value {
+  color: #ffffff;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: 'JetBrains Mono', monospace;
+}
+.kpi-sub {
+  color: var(--teal-primary);
+  font-size: 0.80rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Filter Bar */
+.filter-container {
+  background: #182234;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+/* Tab Navigation */
+.nav-tabs {
+  border-bottom: 1px solid var(--border-color) !important;
+  margin-bottom: 24px;
+}
+.nav-tabs .nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 600 !important;
+  font-size: 0.98rem !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  padding: 12px 24px !important;
+  background: transparent !important;
+  transition: all 0.2s ease !important;
+}
+.nav-tabs .nav-link:hover {
+  color: var(--cyan-primary) !important;
+}
+.nav-tabs .nav-link.active {
+  color: #38bdf8 !important;
+  border-bottom: 3px solid var(--cyan-primary) !important;
+  background: transparent !important;
+}
+
+/* Select / Dropdown overrides for Dark Mode */
+.Select-control {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 8px !important;
+}
+.Select-value-label {
+  color: #f8fafc !important;
+}
+.Select-menu-outer {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  z-index: 1000 !important;
+}
+.Select-option {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+.Select-option.is-focused {
+  background-color: #0369a1 !important;
+  color: #ffffff !important;
+}
+
+/* Slider Overrides */
+.rc-slider-rail {
+  background-color: #334155 !important;
+}
+.rc-slider-track {
+  background-color: var(--cyan-primary) !important;
+}
+.rc-slider-handle {
+  border: solid 2px var(--cyan-primary) !important;
+  background-color: #0f172a !important;
+}
+.rc-slider-mark-text {
+  color: var(--text-muted) !important;
+}
+
+/* Buttons */
+.btn-export {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  color: #ffffff !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+}
+.btn-export:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(6, 182, 212, 0.35);
+}
+
+/* Section Title */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.section-tag {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--cyan-primary);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
