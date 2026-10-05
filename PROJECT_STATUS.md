@@ -9,10 +9,10 @@
 
 | Progress | Status | Current Milestone |
 | :---: | :---: | :--- |
-| **40%** | 🟡 In Progress | **Milestone 3: Open Data Pipeline & Schema Harmonization** |
+| **60%** | 🟡 In Progress | **Milestone 4: Dashboard Layout & Dark Mode Design System** |
 
 ```
-[████████░░░░░░░░░░░░] 40% Completed
+[████████████░░░░░░░░] 60% Completed
 ```
 
 ---
@@ -23,8 +23,8 @@
 | :--- | :--- | :---: | :--- |
 | **Milestone 1** | Project Initialization & Specs Harmonization | ✅ Completed | `README.md`, `.gitignore`, Specs ingestion, Initial Git Commit |
 | **Milestone 2** | Dependencies & Environment Configuration | ✅ Completed | `requirements.txt`, Python packages (`dash`, `plotly`, `pandas`, `requests`, `dash-bootstrap-components`) |
-| **Milestone 3** | Open Data Pipeline & Schema Harmonization | 🔄 In Progress | `data_pipeline.py`, Ingestion scripts for `ds_salaries.csv`, `AI_posting.csv`, `raw_skills.csv`, Supply benchmark datasets |
-| **Milestone 4** | Dashboard Layout & Dark Mode Design System | ⏳ Pending | `app.py`, `assets/custom.css`, KPI Summary Cards, Global Filters Header, 3-Tab Skeleton |
+| **Milestone 3** | Open Data Pipeline & Schema Harmonization | ✅ Completed | `data_pipeline.py`, Ingestion scripts for `ds_salaries.csv`, `AI_posting.csv`, `raw_skills.csv`, Supply & Demand datasets |
+| **Milestone 4** | Dashboard Layout & Dark Mode Design System | 🔄 In Progress | `app.py`, `assets/custom.css`, KPI Summary Cards, Global Filters Header, 3-Tab Skeleton |
 | **Milestone 5** | Visual Components & Interactive Callbacks | ⏳ Pending | Tab 1 (Supply), Tab 2 (Demand), Tab 3 (Gap Analysis), Cross-Filtering & Linked State |
 | **Milestone 6** | Testing, Verification & Export Facilities | ⏳ Pending | CSV export, PNG chart export, end-to-end user interaction validation |
 
@@ -49,9 +49,16 @@
   - Verified import integrity via smoke test script.
 - **Outcome**: Runtime environment ready for data processing and Dash application execution.
 
+### Step 3: Open Data Pipeline & Harmonization Implementation
+- **Timestamp**: 2026-10-05 17:47
+- **Action**:
+  - Implemented `data_pipeline.py` to ingest public open datasets (`ds_salaries.csv`, `AI_posting.csv`, `raw_skills.csv`).
+  - Implemented data generators conforming to BRD Section 5 schema and Handoff Section 4 schema.
+  - Generated and cached 1,107 labor market demand records and 882 academic supply records across 14 universities (US, SG, TH, EU, CN, JP).
+- **Outcome**: Raw and processed datasets cached in `data/processed/` (`supply_data.json`, `demand_data.json`, `ai_postings_timeseries.csv`).
+
 ---
 
 ## 4. Architecture Decisions & Notes
-- Selected **Dash with Plotly** for seamless reactive Python callbacks, avoiding multi-language synchronization overhead between backend data calculations and frontend visualizations.
-- Applied Dark Mode Tech Theme (`#0f172a` canvas, `#06b6d4` cyan, `#14b8a6` teal) for maximum visual contrast with multidimensional data charts.
-- Unified Academic Supply and Labor Demand datasets into structured records adhering to BRD Section 5 and Handoff Section 4 schemas.
+- Built automated caching layer in `data_pipeline.py` to allow offline operation and instant dashboard load times.
+- Included Thai and international universities (CMU, Stanford, MIT, Chula, KKU, Mahidol, NUS, Oxford) to allow domestic and global market comparisons.
